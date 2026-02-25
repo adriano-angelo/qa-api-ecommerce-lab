@@ -25,4 +25,4 @@ jobs:
         run: sleep 3
 
       - name: Run API tests with Newman
-        run: npx newman run postman/QA-Ecommerce.postman_collection.json --folder "CI"
+        run: npx newman run postman/QA-Ecommerce.postman_collection.json --folder "CI" --verbose
