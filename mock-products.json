@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "title": "Mock Product",
+    "price": 99.99,
+    "description": "Mock description",
+    "category": "electronics"
+  }
+]

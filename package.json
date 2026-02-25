@@ -23,5 +23,8 @@
   "homepage": "https://github.com/adriano-angelo/qa-api-ecommerce-lab#readme",
   "devDependencies": {
     "newman": "^6.2.2"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }

@@ -18,5 +18,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Start mock server
+        run: node mock-server.js &
+
+      - name: Wait for server
+        run: sleep 3
+
       - name: Run API tests with Newman
         run: npx newman run postman/QA-Ecommerce.postman_collection.json --folder "CI"
