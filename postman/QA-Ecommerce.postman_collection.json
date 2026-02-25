@@ -9,87 +9,92 @@
   },
   "item": [
     {
-      "name": "Get data",
-      "event": [
+      "name": "CI",
+      "item": [
         {
-          "listen": "test",
-          "script": {
-            "exec": [
-              "pm.test(\"Status 200\", function () {",
-              "    pm.response.to.have.status(200);",
-              "});",
-              "",
-              "pm.test(\"Lista não vazia\", function () {",
-              "    const json = pm.response.json();",
-              "    pm.expect(Array.isArray(json)).to.eql(true);",
-              "    pm.expect(json.length).to.be.above(0);",
-              "});"
-            ],
-            "type": "text/javascript",
-            "packages": {},
-            "requests": {}
-          }
-        }
-      ],
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "https://fakestoreapi.com/products",
-          "protocol": "https",
-          "host": [
-            "fakestoreapi",
-            "com"
+          "name": "Get data",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Lista não vazia\", function () {",
+                  "    const json = pm.response.json();",
+                  "    pm.expect(Array.isArray(json)).to.eql(true);",
+                  "    pm.expect(json.length).to.be.above(0);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
           ],
-          "path": [
-            "products"
-          ]
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://fakestoreapi.com/products",
+              "protocol": "https",
+              "host": [
+                "fakestoreapi",
+                "com"
+              ],
+              "path": [
+                "products"
+              ]
+            },
+            "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+          },
+          "response": []
         },
-        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
-      },
-      "response": []
-    },
-    {
-      "name": "Get product by id",
-      "event": [
         {
-          "listen": "test",
-          "script": {
-            "exec": [
-              "pm.test(\"Status 200\", function () {\r",
-              "  pm.response.to.have.status(200);\r",
-              "});\r",
-              "\r",
-              "pm.test(\"Campos mínimos existem\", function () {\r",
-              "  const j = pm.response.json();\r",
-              "  pm.expect(j).to.have.property(\"id\");\r",
-              "  pm.expect(j).to.have.property(\"title\");\r",
-              "  pm.expect(j).to.have.property(\"price\");\r",
-              "});"
-            ],
-            "type": "text/javascript",
-            "packages": {},
-            "requests": {}
-          }
-        }
-      ],
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "https://fakestoreapi.com/products/1",
-          "protocol": "https",
-          "host": [
-            "fakestoreapi",
-            "com"
+          "name": "Get product by id",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status 200\", function () {\r",
+                  "  pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Campos mínimos existem\", function () {\r",
+                  "  const j = pm.response.json();\r",
+                  "  pm.expect(j).to.have.property(\"id\");\r",
+                  "  pm.expect(j).to.have.property(\"title\");\r",
+                  "  pm.expect(j).to.have.property(\"price\");\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
           ],
-          "path": [
-            "products",
-            "1"
-          ]
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://fakestoreapi.com/products/1",
+              "protocol": "https",
+              "host": [
+                "fakestoreapi",
+                "com"
+              ],
+              "path": [
+                "products",
+                "1"
+              ]
+            }
+          },
+          "response": []
         }
-      },
-      "response": []
+      ]
     },
     {
       "name": "Login",

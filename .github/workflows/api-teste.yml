@@ -19,4 +19,4 @@ jobs:
         run: npm install
 
       - name: Run API tests with Newman
-        run: npx newman run postman/QA-Ecommerce.postman_collection.json
+        run: npx newman run postman/QA-Ecommerce.postman_collection.json --folder "CI"
