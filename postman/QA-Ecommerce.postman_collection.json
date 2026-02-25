@@ -38,7 +38,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "https://fakestoreapi.com/products",
+              "raw": "http://localhost:3000",
               "protocol": "https",
               "host": [
                 "fakestoreapi",
@@ -80,7 +80,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "https://fakestoreapi.com/products/1",
+              "raw": "http://localhost:3000/1",
               "protocol": "https",
               "host": [
                 "fakestoreapi",
@@ -132,7 +132,7 @@
           }
         },
         "url": {
-          "raw": "https://fakestoreapi.com/auth/login",
+          "raw": "https://localhost:3000/auth/login",
           "protocol": "https",
           "host": [
             "fakestoreapi",
